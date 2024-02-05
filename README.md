@@ -18,11 +18,27 @@
   - Full network connectivity between machines in the cluster
 
 * Installing Kubernetes Cluster on Ubuntu 22.0x using kubeadm
+  - How to disable cloud-init in Ubunut
+      How to disable cloud-init in Ubuntu
+      Prevent start
+        Create an empty file to prevent the service from starting
+        sudo touch /etc/cloud/cloud-init.disabled
+      Uninstall
+      Disable all services (uncheck everything except "None"):
+      
+        sudo dpkg-reconfigure cloud-init
+      Uninstall the package and delete the folders
+      
+        sudo dpkg-reconfigure cloud-init
+        sudo apt-get purge cloud-init
+        sudo rm -rf /etc/cloud/ && sudo rm -rf /var/lib/cloud/
+      Restart the computer
+          sudo reboot
 
 1. Upgrade your Ubunut servers
-sudo apt update
-sudo apt -y full-upgrade
-[ -f /var/run/reboot-required ] && sudo reboot -f
+  sudo apt update
+  sudo apt -y full-upgrade
+  [ -f /var/run/reboot-required ] && sudo reboot -f
 
-2. 
+3. 
   
