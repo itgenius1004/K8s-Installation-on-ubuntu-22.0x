@@ -16,4 +16,13 @@
   - CPUs: At least 2 CPUs on the control plane machine
   - Internet connectivity for pulling containers required
   - Full network connectivity between machines in the cluster
+
+* Installing Kubernetes Cluster on Ubuntu 22.0x using kubeadm
+
+1. Upgrade your Ubunut servers
+sudo apt update
+sudo apt -y full-upgrade
+[ -f /var/run/reboot-required ] && sudo reboot -f
+
+2. 
   
