@@ -37,6 +37,7 @@
         sudo reboot
     
 1. Upgrade your Ubunut servers
+ 
   sudo apt update
   sudo apt -y full-upgrade && sudo reboot -f
 
