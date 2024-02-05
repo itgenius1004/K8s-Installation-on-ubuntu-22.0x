@@ -82,6 +82,7 @@
    - Containerd
 
    * Docker runtime
+     
       # Add repo and Install packages
       sudo apt update
       sudo apt install -y curl gnupg2 software-properties-common apt-transport-https ca-certificates
@@ -125,7 +126,7 @@
       net.bridge.bridge-nf-call-ip6tables = 1
       net.bridge.bridge-nf-call-iptables = 1
       net.ipv4.ip_forward = 1
-EOF
+      EOF
      
    * Installing CRI-O runtime
    * Installing Containerd
