@@ -12,8 +12,8 @@
 * Node : Provides the run-time environments for the containers. A set of container pods can span multiple nodes.
 
 * Minimum hardware requirements recommendation
-- Memory : 2 GB or more of RAM per machine
-- CPUs: At least 2 CPUs on the control plane machine
-- Internet connectivity for pulling containers required
-- Full network connectivity between machines in the cluster
+  - Memory : 2 GB or more of RAM per machine
+  - CPUs: At least 2 CPUs on the control plane machine
+  - Internet connectivity for pulling containers required
+  - Full network connectivity between machines in the cluster
   
