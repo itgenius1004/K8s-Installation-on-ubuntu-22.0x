@@ -50,3 +50,6 @@
         sudo apt update
         sudo apt install wget curl vim git kubelet kubeadm kubectl -y
         sudo apt-mark hold kubelet kubeadm kubectl
+
+        kubectl version --client
+        kubeadm version
