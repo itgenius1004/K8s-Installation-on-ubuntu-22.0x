@@ -41,5 +41,8 @@
         sudo apt update
         sudo apt -y full-upgrade && sudo reboot -f
 
-3. 
-  
+3. Install kubelet, kubeadm and kubectl
+
+        sudo apt install curl apt-transport-https -y
+        curl -fsSL  https://packages.cloud.google.com/apt/doc/apt-key.gpg|sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/k8s.gpg
+        echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
