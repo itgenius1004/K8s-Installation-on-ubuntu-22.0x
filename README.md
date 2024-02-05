@@ -33,7 +33,7 @@
         sudo apt-get purge cloud-init
         sudo rm -rf /etc/cloud/ && sudo rm -rf /var/lib/cloud/
       Restart the computer
-          sudo reboot
+        sudo reboot
 
 1. Upgrade your Ubunut servers
   sudo apt update
