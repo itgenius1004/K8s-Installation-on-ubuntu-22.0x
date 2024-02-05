@@ -41,7 +41,7 @@
         sudo apt update
         sudo apt -y full-upgrade && sudo reboot -f
 
-3. Install kubelet, kubeadm and kubectl
+2. Install kubelet, kubeadm and kubectl
 
         sudo apt install curl apt-transport-https -y
         curl -fsSL  https://packages.cloud.google.com/apt/doc/apt-key.gpg|sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/k8s.gpg
@@ -53,3 +53,27 @@
 
         kubectl version --client
         kubeadm version
+   
+3. Disable Swap Space
+
+        sudo swapoff -a
+        free -h
+        sudo sed -i.bak -r 's/(.+ swap .+)/#\1/' /etc/fstab
+        sudo vim /etc/fstab
+        sudo mount -a
+        free -h
+        # Enable kernel modules
+        sudo modprobe overlay
+        sudo modprobe br_netfilter
+        
+        # Add some settings to sysctl
+        sudo tee /etc/sysctl.d/kubernetes.conf<<EOF
+        net.bridge.bridge-nf-call-ip6tables = 1
+        net.bridge.bridge-nf-call-iptables = 1
+        net.ipv4.ip_forward = 1
+        EOF
+        
+        # Reload sysctl
+        sudo sysctl --system
+
+5. 
