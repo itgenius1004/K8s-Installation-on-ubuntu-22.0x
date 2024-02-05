@@ -77,9 +77,9 @@
         sudo sysctl --system
 
 4. Install Container runtime(all nodes)
-   # Docker
-   # CRI-O
-   # Containerd
+   * Docker
+   * CRI-O
+   * Containerd
 
    * Docker runtime
      
