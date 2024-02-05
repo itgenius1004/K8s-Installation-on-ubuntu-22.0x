@@ -38,8 +38,8 @@
     
 1. Upgrade your Ubunut servers
  
-      sudo apt update
-      sudo apt -y full-upgrade && sudo reboot -f
+        sudo apt update
+        sudo apt -y full-upgrade && sudo reboot -f
 
 3. 
   
