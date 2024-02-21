@@ -76,7 +76,7 @@
         # Reload sysctl
         sudo sysctl --system
 
-4. Install Container runtime(all nodes)
+4. Install Container runtime(all nodes) - you have to choose one runtime at a time
    * Docker
    * CRI-O
    * Containerd
